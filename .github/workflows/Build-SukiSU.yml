@@ -6,7 +6,7 @@ on:
         type: choice
         description: "分支"
         required: true
-        default: sm8550
+        default: sm8850
         options:
           - sm7550
           - sm7675
@@ -15,11 +15,12 @@ on:
           - sm8550
           - sm8650
           - sm8750
+          - sm8850
       FEIL:
         type: choice
         description: "配置文件"
         required: true
-        default: oneplus_ace2_pro_v
+        default: oneplus_15
         options:
           - oneplus_nord_ce4_v
           - oneplus_ace_3v_v
@@ -44,38 +45,42 @@ on:
           - oneplus_ace5_pro
           - oneplus_pad_2_pro
           - oneplus_pad_3
+          - oneplus_15
           - GitHub有bug可能不显示最后一项,误使用此项
       CPUD:
         type: choice
         description: "处理器代号"
         required: true
-        default: kalama
+        default: canoe
         options:
           - crow
           - waipio
           - kalama
           - pineapple
           - sun
+          - canoe
       ANDROID_VERSION:
         type: choice
         description: "内核安卓版本"
         required: true
-        default: android15
+        default: android16
         options:
           - android12
           - android13
           - android14
           - android15
+          - android16
       KERNEL_VERSION:
        type: choice
        description: "内核版本"
        required: true
-       default: "5.15"
+       default: "6.12"
        options:
          - "5.10"
          - "5.15"
          - "6.1"
          - "6.6"
+         - "6.12"
       BUILD_METHOD:
         type: choice
         description: "编译方式"
@@ -123,8 +128,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "Numbersf"
-          git config --global user.email "263623064@qq.com"
+          git config --global user.name "Liberation"
+          git config --global user.email "1487098940@qq.com"
 
       - name: Install dependencies
         run: |
